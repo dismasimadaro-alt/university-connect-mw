@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard | University Connect MW</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #183153;
+}
+
+header {
+  background: #12345a;
+  color: white;
+  padding: 18px;
+  text-align: center;
+}
+
+header span { color: #50d6a5; }
+
+nav {
+  background: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: #12345a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+.welcome, .card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 12px #0001;
+}
+
+.status {
+  background: #fff3cd;
+  color: #795b00;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+h2 { color: #176b83; }
+
+.post {
+  border-top: 1px solid #e2e8f0;
+  padding: 15px 0;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background: #35c99b;
+  color: #12345a;
+  font-weight: bold;
+}
+
+button:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+}
+
+footer {
+  background: #12345a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>University Connect <span>MW</span></h2>
+<p>One Malawi. Many Universities. One Community.</p>
+</header>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="#feed">National Feed</a>
+<a href="#universities">Universities</a>
+<a href="#groups">Groups</a>
+<a href="#profile">My Profile</a>
+</nav>
+
+<main class="container">
+
+<section class="welcome">
+<h1>Welcome, Student! 👋</h1>
+<p>Your university community starts here.</p>
+
+<div class="status">
+<strong>Application status: Pending approval</strong>
+<p>You can browse the community while your student application is being reviewed. Posting and messaging will become available after approval.</p>
+</div>
+</section>
+
+<section class="card" id="feed">
+<h2>📰 National Student Feed</h2>
+<p>Discover what's happening across universities in Malawi.</p>
+
+<div class="post">
+<h3>Welcome to University Connect MW!</h3>
+<p>A community bringing students from different universities together.</p>
+<small>University Connect MW</small>
+</div>
+
+<div class="post">
+<h3>Share ideas. Build friendships.</h3>
+<p>Connect with fellow students and discover communities across Malawi.</p>
+<small>University Connect MW</small>
+</div>
+
+<button disabled>Posting available after approval</button>
+</section>
+
+<section class="card" id="universities">
+<h2>🎓 University Communities</h2>
+<p>Explore your university and meet students from other institutions.</p>
+<ul>
+<li>University of Malawi (UNIMA)</li>
+<li>Mzuzu University (MZUNI)</li>
+<li>LUANAR</li>
+<li>Malawi University of Science and Technology (MUST)</li>
+<li>MUBAS</li>
+<li>KUHeS</li>
+</ul>
+</section>
+
+<section class="card" id="groups">
+<h2>👥 Student Groups</h2>
+<p>Discover communities based on interests, studies and student life.</p>
+<p>Groups will be available for interaction in a future update.</p>
+</section>
+
+<section class="card" id="profile">
+<h2>👤 My Student Profile</h2>
+<p>Your name, university, programme and year of study will appear here after registration.</p>
+</section>
+
+<section class="card">
+<h2>💬 Messages</h2>
+<p>Student messaging will become available after administrator approval.</p>
+<button disabled>Messaging unavailable</button>
+</section>
+
+</main>
+
+<footer>
+<p>University Connect MW</p>
+<p>Connecting students across Malawi 🇲🇼</p>
+</footer>
+
+</body>
+</html>
