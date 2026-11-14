@@ -7,6 +7,34 @@
 
 <style>
 * { box-sizing: border-box; }
+<section class="community-search">
+    <h2>Find Your University</h2>
+    <p>Search for your university community below.</p>
+
+    <input
+        type="text"
+        id="universitySearch"
+        placeholder="Search university name..."
+        onkeyup="searchUniversities()"
+        style="width:100%; padding:12px; border-radius:8px; margin-bottom:20px;"
+    >
+</section>
+
+<script>
+function searchUniversities() {
+    const search = document.getElementById("universitySearch")
+        .value.toLowerCase();
+
+    const communities = document.querySelectorAll(".community-card");
+
+    communities.forEach(function(community) {
+        const university = community.innerText.toLowerCase();
+
+        community.style.display =
+            university.includes(search) ? "block" : "none";
+    });
+}
+</script>
 <main class="communities-section">
     <h1>University Communities</h1>
     <p>Connect with students from universities across Malawi.</p>
