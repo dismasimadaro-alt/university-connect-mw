@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration | University Connect MW</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5f9;color:#183153}
+header{background:#12345a;color:white;text-align:center;padding:22px}
+header h2{margin:0}
+header span{color:#50d6a5}
+.container{max-width:600px;margin:30px auto;padding:25px;background:white;border-radius:14px;box-shadow:0 5px 20px #0001}
+h1{text-align:center;font-size:26px}
+.intro{text-align:center;color:#64748b;line-height:1.5}
+label{display:block;font-weight:bold;margin:17px 0 7px}
+input,select{width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;background:white}
+button{width:100%;padding:15px;margin-top:22px;background:#35c99b;color:#12345a;border:0;border-radius:8px;font-size:17px;font-weight:bold}
+button:active{opacity:.8}
+.note{font-size:13px;color:#64748b;line-height:1.5}
+.message{display:none;padding:13px;margin-top:15px;border-radius:8px;background:#e0f7ed;color:#126044}
+a{color:#16866c}
+</style>
+</head>
+<body>
+<header>
+<h2>University Connect <span>MW</span></h2>
+<p>One Malawi. Many Universities. One Community.</p>
+</header>
+
+<main class="container">
+<h1>Create Your Student Account</h1>
+<p class="intro">Join students from universities across Malawi. Complete your details to apply for membership.</p>
+
+<form id="registrationForm">
+<label for="fullname">Full name</label>
+<input id="fullname" name="fullname" type="text" placeholder="Enter your full name" required>
+
+<label for="email">Email address</label>
+<input id="email" name="email" type="email" placeholder="Enter your email address" required>
+
+<label for="password">Create password</label>
+<input id="password" name="password" type="password" minlength="8" placeholder="At least 8 characters" required>
+
+<label for="university">Choose your university</label>
+<select id="university" name="university" required>
+<option value="">Select your university</option>
+<option>University of Malawi (UNIMA)</option>
+<option>Mzuzu University (MZUNI)</option>
+<option>Lilongwe University of Agriculture and Natural Resources (LUANAR)</option>
+<option>Malawi University of Science and Technology (MUST)</option>
+<option>Malawi University of Business and Applied Sciences (MUBAS)</option>
+<option>Kamuzu University of Health Sciences (KUHeS)</option>
+</select>
+
+<label for="programme">Programme of study</label>
+<input id="programme" name="programme" type="text" placeholder="e.g. Bachelor of Education" required>
+
+<label for="year">Year of study</label>
+<select id="year" name="year" required>
+<option value="">Choose year</option>
+<option>First year</option>
+<option>Second year</option>
+<option>Third year</option>
+<option>Fourth year</option>
+<option>Fifth year</option>
+<option>Other</option>
+</select>
+
+<label for="studentnumber">Student registration number</label>
+<input id="studentnumber" name="studentnumber" type="text" placeholder="Enter your student number" required>
+
+<label for="studentid">Student ID or proof of enrolment</label>
+<input id="studentid" name="studentid" type="file" accept="image/*,.pdf" required>
+
+<p class="note">Your application will require administrator review. Please only submit genuine student information. Do not upload real identity documents to this demonstration page yet.</p>
+
+<label>
+<input type="checkbox" required style="width:auto">
+ I confirm that the information I have provided is accurate.
+</label>
+
+<button type="submit">Submit Registration Application</button>
+</form>
+
+<div class="message" id="message">
+<strong>Demo form completed!</strong>
+<p>This page is only a design preview. Your application has NOT been securely submitted or saved. We will connect the secure registration system next.</p>
+</div>
+
+<p class="note" style="text-align:center;margin-top:22px">
+Already have an account? Login will be added in the next stage.
+</p>
+<p style="text-align:center"><a href="index.html">Return to homepage</a></p>
+</main>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit",function(event){
+event.preventDefault();
+document.getElementById("message").style.display="block";
+});
+</script>
+</body>
+</html>
